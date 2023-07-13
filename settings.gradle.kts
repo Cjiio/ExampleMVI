@@ -16,3 +16,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Example MVI"
 include(":app")
+include(":n2n")

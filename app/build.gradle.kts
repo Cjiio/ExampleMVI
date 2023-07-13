@@ -53,6 +53,8 @@ android {
 }
 
 dependencies {
+    implementation(fileTree(mapOf("include" to listOf("*.jar"), "dir" to "libs")))
+    implementation(project(":n2n"))
     //==================== Logging =================================
     val logVersion = "2.6.9"
     implementation("com.github.fengzhizi715.SAF-Kotlin-log:core:$logVersion")
@@ -78,7 +80,7 @@ dependencies {
     implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
 
     //==================== Database ==============================
-    val roomVersion = "2.5.1"
+    val roomVersion = "2.5.2"
     implementation("androidx.room:room-runtime:$roomVersion")
     kapt("androidx.room:room-compiler:$roomVersion")
     implementation("androidx.room:room-ktx:$roomVersion")
@@ -88,7 +90,7 @@ dependencies {
     implementation("androidx.datastore:datastore-preferences:1.0.0")
 
     //==================== Navigation ===============================
-    implementation("androidx.navigation:navigation-compose:2.5.3")
+    implementation("androidx.navigation:navigation-compose:2.6.0")
 
     //==================== Memory Leak Detection ====================
     debugImplementation("com.squareup.leakcanary:leakcanary-android:2.12")
