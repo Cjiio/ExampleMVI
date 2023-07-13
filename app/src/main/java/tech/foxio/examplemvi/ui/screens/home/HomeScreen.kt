@@ -31,7 +31,6 @@ fun HomeScreen(
         contract = ActivityResultContracts.StartActivityForResult(),
         onResult = { result ->
             if (result.resultCode == Activity.RESULT_OK) {
-                // VPN 权限已授予
                 startVpnService(context)
             }
         }
